@@ -53,3 +53,31 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+markdown: kramdown
+highlighter: rouge
+
+permalink: /blog/:title
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path
+
+  gallery:
+    sort_by: rank
+    output: true
+    permalink: /gallery/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: doc
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: doc
+      rank: 0001
