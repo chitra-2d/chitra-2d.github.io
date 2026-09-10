@@ -1,72 +1,47 @@
 <p class="menu-title">Main</p>
 <ul class="menu-items">
-    <li><a href="/">Home</a></li>
-    <li><a href="/sponsors">Sponsors</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/docs/introduction">Docs</a></li>
-    <li><a href="/gallery">Gallery</a></li>
+    {% include sidebar_menu.html url="/" title="Home" %}
+    {% include sidebar_menu.html url="/sponsors" title="Sponsors" %}
+    {% include sidebar_menu.html url="/blog" title="Blog" %}
+    {% include sidebar_menu.html url="/docs" title="Docs" %}
+    {% include sidebar_menu.html url="/gallery" title="Gallery" %}
     <li><a href="https://github.com/aravindavk/chitra-d">Github Repo</a></li>
+    {% include sidebar_menu.html url="/docs/reference" title="Reference" %}
 </ul>
 <p class="menu-title">General</p>
 <ul class="menu-items">
-    <li><a href="/docs">Introduction</a></li>
-    <li><a href="/docs/quickstart">Quickstart</a></li>
-    <li><a href="/docs/installation">Installation</a></li>
-    <li><a href="/docs/drawing-context">Drawing Context</a></li>
-    <li><a href="/docs/d-guide">D guide</a></li>
-    <li><a href="/docs/coordinate-system">Coordinate System</a></li>
-    <li><a href="/docs/paper-sizes">Paper Sizes</a></li>
-    <li><a href="/docs/exporting">Exporting</a></li>
-    <li><a href="/docs/page-properties">Page properties</a></li>
-    <li><a href="/docs/reference">Reference</a></li>
-    <li><a href="/docs/lua-plugin">Lua Plugin</a></li>
+    {% include sidebar_menu.html url="/docs" title="Introduction" %}
+    {% include sidebar_menu.html url="/docs/features" title="Features" %}
+    {% include sidebar_menu.html url="/docs/quickstart" title="Quickstart" %}
+    {% include sidebar_menu.html url="/docs/installation" title="Installation" %}
+    {% include sidebar_menu.html url="/docs/drawing-context" title="Drawing Context" %}
+    {% include sidebar_menu.html url="/docs/d-guide" title="D guide" %}
+    {% include sidebar_menu.html url="/docs/coordinate-system" title="Coordinate System" %}
+    {% include sidebar_menu.html url="/docs/paper-sizes" title="Paper Sizes" %}
+    {% include sidebar_menu.html url="/docs/exporting" title="Exporting" %}
+    {% include sidebar_menu.html url="/docs/lua-plugin" title="Lua Plugin" %}
 </ul>
 
 <p class="menu-title">Utilities</p>
 <ul class="menu-items">
-    <li><a href="/docs/units">Units</a></li>
-    <li><a href="/docs/distance">Distance</a></li>
-    <li><a href="/docs/contstants">Constants</a></li>
-    <li><a href="/docs/named-colors">Named Colors</a></li>
+    {% include sidebar_menu.html url="/docs/units" title="Units" %}
+    {% include sidebar_menu.html url="/docs/distance" title="Distance" %}
+    {% include sidebar_menu.html url="/docs/constants" title="Constants" %}
+    {% include sidebar_menu.html url="/docs/named-colors" title="Named Colors" %}
 </ul>
 
 <p class="menu-title">Drawing</p>
 <ul class="menu-items">
-    <li><a href="/docs/colors">Colors</a></li>
-    <li>
-        <a class="is-active">Shapes</a>
-        <ul>
-            <li><a href="/docs/point">Point</a></li>
-            <li><a href="/docs/line">Line</a></li>
-            <li><a href="/docs/rect">Rectangle & Square</a></li>
-            <li><a href="/docs/oval">Arc, Oval & Circle</a></li>
-            <li><a href="/docs/polygons">Polygons</a></li>
-        </ul>
-    </li>
-    <li>
-        <a class="is-active">Transformations</a>
-        <ul>
-            <li><a href="/docs/translate">Translate</a></li>
-            <li><a href="/docs/rotate">Rotate</a></li>
-            <li><a href="/docs/scale">Scale</a></li>
-            <li><a href="/docs/box-transformations">Box Transformations</a></li>
-        </ul>
-    </li>
-    <li><a href="/docs/grid">Grid</a></li>
-    <li><a href="/docs/background">Background</a></li>
-    <li><a href="/docs/images">Images</a></li>
-    <li>
-        <a class="is-active">Text</a>
-        <ul>
-            <li><a href="/docs/text">Text</a></li>
-            <li><a href="/docs/syntax-highlighting">Syntax Highlighting</a></li>
-            <li><a href="/docs/text-styles">Text Styles</a></li>
-            <li><a href="/docs/variables">Variables</a></li>
-        </ul>
-    </li>
-    <li><a href="/docs/multipage-pdfs">Multipage PDFs</a></li>
-    <li><a href="/docs/bezier-paths">Bezier Paths</a></li>
-    <li><a href="/docs/qr">QR</a></li>
-    <li><a href="/docs/tables">Tables</a></li>
-    <li><a href="/docs/animation">Animation</a></li>
+    {% include sidebar_menu.html url="/docs/colors" title="Colors" %}
+    {% include sidebar_menu.html url="/docs/shapes" title="Shapes" %}
+    {% include sidebar_menu.html url="/docs/transformations" title="Transformations" %}
+    {% include sidebar_menu.html url="/docs/grid" title="Grid" %}
+    {% include sidebar_menu.html url="/docs/background" title="Background" %}
+    {% include sidebar_menu.html url="/docs/images" title="Images" %}
+    {% include sidebar_menu.html url="/docs/text" title="Text" %}
+    {% include sidebar_menu.html url="/docs/multipage-pdfs" title="Multipage PDFs" %}
+    {% include sidebar_menu.html url="/docs/bezier" title="Bezier Paths" %}
+    {% include sidebar_menu.html url="/docs/qr" title="QR" %}
+    {% include sidebar_menu.html url="/docs/tables" title="Tables" %}
+    {% include sidebar_menu.html url="/docs/animation" title="Animation" %}
 </ul>

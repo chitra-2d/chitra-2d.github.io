@@ -1,0 +1,145 @@
+---
+layout: default
+title: Home
+---
+<section class="hero py-4">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar mb-6">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://raw.githubusercontent.com/aravindavk/chitra-docs-illustrations/refs/heads/main/output/chitra-logo.png" alt="Logo"/>
+          </a>
+          {% include version.html %}
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="/" class="navbar-item is-active1"> Home </a>
+            <a href="/docs" class="navbar-item"> Docs </a>
+            <a href="/blog" class="navbar-item"> Blog </a>
+            <a href="/gallery" class="navbar-item"> Gallery </a>
+            <a href="https://github.com/chitra-2d/chitra-d" class="navbar-item"> Source </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-left">
+      <div class="columns">
+        <div class="column">
+          <p class="title is-size-1 mb-4">
+            Expressive 2D graphics library for D
+          </p>
+          <p class="subtitle">
+              Chitra is an expressive <strong>2D graphics library</strong> for the D programming language, designed for creative coding, generative art, animation and document generation. 
+          </p>
+          <div class="buttons">
+          <a href="/docs" class="button has-background-chitra has-text-white is-light is-large">Get started</a>
+          <a href="/gallery" class="button is-link is-light is-large">Gallery</a>
+          </div>
+          <div class="">
+              <span class="tag">Free and Open Source - MIT</span>
+          </div>
+        </div>
+        <div class="column">
+            <img src="https://raw.githubusercontent.com/chitra-2d/chitra-docs-illustrations/refs/heads/main/output/gallery/terminal.png"/>
+            <div class="has-text-centered is-size-6">
+                <p>Above image is generated using Chitra. See <a href="/gallery/terminal">here</a>.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section has-background-chitra-light">
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column is-3">
+                <p class="is-size-3">Lua Plugin</p>
+                <p>
+                    Easily draw and integrate with other programming languages without recompiling (D).
+                </p>
+            </div>
+            <div class="column is-3">
+                <p class="is-size-3">Rich text support</p>
+                <p>
+                    Render text with font, size, weight, and colour control. Mix styles in a single paragraph using TextStyle. Syntax highlighting is also supported via pygmentize CLI.
+                </p>
+            </div>
+            <div class="column is-3">
+                <p class="is-size-3">Flexible Canvases, Real-World Units</p>
+                <p>
+                    Create canvases by pixel count, paper size, or physical units. Landscape, portrait, custom - all supported.
+                </p>
+            </div>
+
+            <div class="column is-3">
+                <p class="is-size-3">Multiple Output Formats</p>
+                <p>
+                    Save graphics as PNG, SVG, PDF, GIF, MP4, or WEBM.
+                </p>
+            </div>
+
+            <div class="column is-3">
+                <p class="is-size-3">Animation</p>
+                <p>
+                    Easily create 2D animation powered by ffmpeg. Chitra generates PNG images for each frame and runs the ffmpeg command with the right arguments to generate the animation.
+                </p>
+            </div>
+
+            <div class="column is-3">
+                <p class="is-size-3">Built-in QR support</p>
+                <p>
+                    Easily create QR codes with the required color or background. Arrange the QR image on the canvas with pixel-perfect precision.
+                </p> 
+            </div>
+
+            <div class="column is-3">
+                <p class="is-size-3">Grids, Layout Boxes and Tables</p>
+                <p>
+                    Chitra supports creating multiple grids and tables that handle the coordinate arithmetic for you.
+                </p>
+            </div>
+            <div class="column is-3">
+                <p class="is-size-3">And much more..</p>
+                <p>See <a href="/docs/features">features</a> page.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section has-background-white">
+    <div class="container">
+        <!-- <h2 class="is-size-3 has-text-centered">Sponsors</h2> -->
+        <div class="columns">
+            <div class="column">
+                <h3 class="is-size-3 has-font-weight-bold">Sponsors</h3>
+            </div>
+            <div class="column">
+                <img src="https://raw.githubusercontent.com/aravindavk/chitra-d/main/static/kadalu-technologies-logo.svg" style="height:70px" />
+            </div>
+            <div class="column">
+                <img src="https://raw.githubusercontent.com/aravindavk/chitra-d/main/static/FOSS%20United%20Logo%20Black.png" style="height: 70px" />
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+        <p class="m-6 px-6 py-4 is-size-5 has-text-centered">
+            If you use Chitra or are interested in helping this project, a contribution would mean A <strong>LOT</strong> to me. With your help, continuing my work can be sustainable. Thank you for your continued support!
+        </p>
+        <p class="has-text-centered">
+            <a class="button is-large has-background-chitra" href="https://github.com/sponsors/aravindavk">Sponsor</a>
+        </p>
+    </div>
+</section>

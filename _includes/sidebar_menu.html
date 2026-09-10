@@ -1,0 +1,5 @@
+{% if page.url == include.url %}
+<li><a class="is-active1" href="{{ include.url }}">{{ include.title }}</a></li>
+{% else %}
+<li><a class="" href="{{ include.url }}">{{ include.title }}</a></li>
+{% endif %}

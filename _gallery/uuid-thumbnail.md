@@ -11,5 +11,3 @@ Generating unique thumbnail image for the given UUID. Based on this [blog post: 
 %}
 
 Combines the UUID string three times to create a string that can be split into 16 hex color codes. Use the grid feature to create a grid of `4x4` and draw rectangle with respective color. [Source](https://github.com/aravindavk/chitra-docs-illustrations/blob/main/gallery/uuid_thumbnail.d).
-
-## This is sub heading

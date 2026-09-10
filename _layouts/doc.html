@@ -9,9 +9,16 @@ layout: default
  }
  .sidebar {
      width: 250px;
-     background: #C7D6FF;
      color: #000;
      transition: 0.3s;
+ }
+ .sidebar a {
+     text-decoration: none;
+     color: #000;
+ }
+ .sidebar a.is-active1 {
+     text-decoration: underline;
+     font-weight: bold;
  }
  .main-content {
      flex: 1;
@@ -37,6 +44,7 @@ layout: default
  .menu-title {
      margin-top: 20px;
      text-transform: uppercase;
+     font-weight: bold;
  }
 
  .rside figure{
@@ -132,13 +140,28 @@ layout: default
  }
 </style>
 <div class="app-container">
-  <aside class="sidebar p-4">
-      <img src="https://raw.githubusercontent.com/aravindavk/chitra-docs-illustrations/refs/heads/main/output/chitra-logo.png"/>
+  <aside class="sidebar p-4 has-background-chitra-light">
+      <a href="/">
+          <img src="https://raw.githubusercontent.com/aravindavk/chitra-docs-illustrations/refs/heads/main/output/chitra-logo.png"/>
+      </a>
+      {% include version.html %}
       {% include sidebar.html %}
   </aside>
   <main class="main-content p-4 px-6">
     <div class="article" id="{{ page.slug }}">
-        <h1 class="is-size-1 has-text-centered mt-4 mb-6">{{ page.title }}</h1>
+      <h1 class="is-size-1 has-text-centered mt-4 mb-6">
+        {% assign pfx = page.url | slice: 0, 8 %}
+        {% assign pfx2 = page.url | slice: 0, 5 %}
+        {% if page.url != "/gallery" and pfx == "/gallery" %}
+        <a href="/gallery" class="is-large has-background-chitra-light is-size-1">Gallery/</a>{{ page.title }}
+        {% elsif page.url != "/blog" and pfx2 == "/blog" %}
+        <a href="/blog" class="is-large has-background-chitra-light is-size-1">Blog/</a>{{ page.title }}
+        {% elsif page.url != "/docs" and pfx2 == "/docs" %}
+        <a href="/docs" class="is-large has-background-chitra-light is-size-1">Docs/</a>{{ page.title }}
+        {% else %}
+        {{ page.title }}
+        {% endif %}
+      </h1>
         <div id="content">
             {{ content }}
         </div>
