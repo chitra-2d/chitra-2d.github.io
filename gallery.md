@@ -29,7 +29,7 @@ Collection of the artworks created using Chitra
 {% include gallery_item.html
     src="https://raw.githubusercontent.com/chitra-2d/chitra-docs-illustrations/refs/heads/main/output/thumbs/vowels.png"
     alt="Find Vowels"
-    link="/gallery/vowels"
+    link="/gallery/find-vowels"
 %}
 
 {% include gallery_item.html
