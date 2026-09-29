@@ -183,7 +183,7 @@ layout: default
       <h3 class="is-size-5 mt-4" x-show="links().length">LINKS</h3>
       <ul>
           <template x-for="link in links">
-              <li><a :href="link.href" x-text="link.innerHTML"></a></li>
+              <li><a :href="link.url" x-text="link.title"></a></li>
           </template>
       </ul>
   </div>
@@ -195,7 +195,22 @@ layout: default
              return document.querySelectorAll('#content h2');
          },
          links(){
-             return document.querySelectorAll('#content a');
+             return this.cleanedLinks(document.querySelectorAll('#content a'));
+         },
+         cleanedLinks(links) {
+             var outlinks = [];
+             for (var i=0; i< links.length; i++) {
+                 if (links[i].innerHTML.trim().startsWith("<img")) {
+                     var title = "";
+                     var rawTitle = links[i].innerHTML;
+                     var srcIndex = rawTitle.indexOf("src=\"");
+                     var imgPath = rawTitle.slice(srcIndex + 5, rawTitle.length);
+                     imgPath = imgPath.slice(0, imgPath.indexOf("\"")).split("/").slice(-1)[0];
+                     outlinks.push({url: links[i].href, title: imgPath});
+                 } else
+                     outlinks.push({url: links[i].href, title: links[i].innerHTML});
+             }
+             return outlinks;
          }
      }));
  });
